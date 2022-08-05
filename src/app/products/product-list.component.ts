@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { filter } from "rxjs";
 import { IProduct } from "./product";
 
 @Component({
@@ -20,9 +21,10 @@ export class ProductListComponent implements OnInit {
     set listFilter(value: string) {
         this._listFilter = value;
         console.log('In setter: ', value);
-
+        this.filteredProducts = this.performFilter(value);
     }
 
+    filteredProducts: IProduct[] = [];
     products: IProduct[] = [
         {
             "productId": 2,
@@ -49,6 +51,11 @@ export class ProductListComponent implements OnInit {
         this.showImage = !this.showImage;
     }
     ngOnInit(): void {
-        this.listFilter = 'cart1';
+        this.listFilter = 'cart';
+    }
+    performFilter(filterby: string): IProduct[] {
+        filterby = filterby.toLocaleLowerCase();
+        return this.products.filter((product: IProduct) =>
+        product.productName.toLocaleLowerCase().includes(filterby));
     }
 }
