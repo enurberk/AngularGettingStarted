@@ -19,7 +19,8 @@ import { WelcomeComponent } from './home/welcome.component';
     ConvertToSpacesPipe,
     StarComponent,
     ProductDetailComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
