@@ -9,9 +9,12 @@ import { IProduct } from './product';
 export class ProductDetailComponent implements OnInit {
   pageTitle: string = 'Product Detail';
   product: IProduct | undefined;
+  imageWidth: number = 250;
+  imageMargin: number = 2;
+
 
   constructor(private route: ActivatedRoute,
-              private router: Router) { }
+    private router: Router) { }
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
@@ -28,7 +31,7 @@ export class ProductDetailComponent implements OnInit {
     };
   }
 
-  onBack(): void{
+  onBack(): void {
     this.router.navigate(['/products']);
   }
 }
