@@ -1,5 +1,11 @@
 # Angular Getting Started
 
+**Instance of the project pages**
+
+<img width="960" alt="1" src="https://user-images.githubusercontent.com/37108233/188395317-c99d9dd6-688d-4191-8f66-366be6c1f53e.PNG">
+<img width="960" alt="2" src="https://user-images.githubusercontent.com/37108233/188395307-18d9f48a-a086-4e20-a4a2-8a1a8d9d482e.PNG">
+<img width="960" alt="3" src="https://user-images.githubusercontent.com/37108233/188395314-66cc022d-8c7c-45af-930a-b15fe785bc60.PNG">
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
 
 ## Development server
